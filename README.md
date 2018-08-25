@@ -5,4 +5,4 @@ Rethink robotics mujoco models
 
 sawyer.xml           |  baxter.xml   
 :-------------------------:|:-------------------------:
-![Alt text](assets/sawyer.jpg?raw=false "sawyer") |  ![Alt text](assets/sawyer.jpg?raw=false "sawyer")
+![Alt text](assets/sawyer.jpg?raw=false "sawyer") |  comming soon
