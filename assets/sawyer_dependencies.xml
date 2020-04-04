@@ -7,20 +7,20 @@
     Copyright 2018 Vikash Kumar
         Licensed under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 ====================================================== -->
-    <compiler angle="radian" meshdir="meshes/sawyer"/>
+    <compiler angle="radian"/>
     <option iterations="50" integrator="Euler" timestep="0.002" cone="elliptic" />
 
     <asset>
-        <mesh name="pedestal" file="pedestal.stl" />
-        <mesh name="base" file="base.stl" />
-        <mesh name="l0" file="l0.stl" />
-        <mesh name="head" file="head.stl" />
-        <mesh name="l1" file="l1.stl" />
-        <mesh name="l2" file="l2.stl" />
-        <mesh name="l3" file="l3.stl" />
-        <mesh name="l4" file="l4.stl" />
-        <mesh name="l5" file="l5.stl" />
-        <mesh name="l6" file="l6.stl" />
+        <mesh name="pedestal" file="../sawyer_sim/meshes/sawyer/pedestal.stl" />
+        <mesh name="base" file="../sawyer_sim/meshes/sawyer/base.stl" />
+        <mesh name="l0" file="../sawyer_sim/meshes/sawyer/l0.stl" />
+        <mesh name="head" file="../sawyer_sim/meshes/sawyer/head.stl" />
+        <mesh name="l1" file="../sawyer_sim/meshes/sawyer/l1.stl" />
+        <mesh name="l2" file="../sawyer_sim/meshes/sawyer/l2.stl" />
+        <mesh name="l3" file="../sawyer_sim/meshes/sawyer/l3.stl" />
+        <mesh name="l4" file="../sawyer_sim/meshes/sawyer/l4.stl" />
+        <mesh name="l5" file="../sawyer_sim/meshes/sawyer/l5.stl" />
+        <mesh name="l6" file="../sawyer_sim/meshes/sawyer/l6.stl" />
     </asset>
 
     <contact>
