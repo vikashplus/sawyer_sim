@@ -1,48 +1,23 @@
+<mujoco model='sawyer-v2.0'>
 <!-- ======================================================
-	Model 		:: sawyer
-		
-	Mujoco		:: Advanced physics simulation engine
-		Source		: www.roboti.us
-		Version		: 1.50
-		Released 	: 23Apr'17
-		
-	Author		:: Vikash Kumar
-		Contacts 	: vikashplus@gmail.com
-		Last edits 	: 25Aug'18
-		
-	Copyright 2018 Vikash Kumar
-		Licensed under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+    Model       :: Sawyer (MuJoCoV2.0)
+    Author      :: Vikash Kumar
+        Contacts    : vikashplus@gmail.com
+        Last edits  : 3Apr'20, 25Aug'18
+    Copyright 2018 Vikash Kumar
+        Licensed under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 ====================================================== -->
 
-<?xml version="1.0" encoding="utf-8"?>
-<mujoco model='sawyer-v150'>
-
- 	<!-- <equality> -->
-        <!-- <weld body1="mocap" body2="right_hand" solref="0.01"></weld> -->
-    <!-- </equality> -->
-
-	<include file="assets/sawer_dependencies.xml"/>
-	<worldbody>
-		<geom name='floor' pos='0 0 0' size='2 2 .075' type='plane' material="MatPlane" condim='3'/>
+    <include file="assets/sawyer_dependencies.xml"/>
+    <include file="assets/basic_scene.xml"/>
+    <worldbody>
         <light mode='targetbodycom' target='torso' directional='false' diffuse='.8 .8 .8' specular='0.3 0.3 0.3' pos='0 0 4.0' dir='0 0 -1'/>
+        <include file="assets/sawyer_chain.xml"/>
+    </worldbody>
 
-		<include file="assets/sawyer_chain.xml"/>
-
-	    <!-- <body mocap="true" name="mocap" pos="1 .15 1.25">
-	        <geom conaffinity="0" contype="0" pos="0 0 0" rgba="1.0 0.5 0.5 1" size="0.01 0.02 0.05" type="box" group='3'/>
-	        <site pos="0 0 0" rgba="0.0 0.5 0.5 0" size="0.01" type="sphere"/>
-	    </body> -->
-
-	</worldbody>
-
-	<actuator>
-		<motor joint="right_j0" ctrlrange="-100.0 100.0"/>
-		<motor joint="right_j1" ctrlrange="-100.0 100.0"/>
-		<motor joint="right_j2" ctrlrange="-100.0 100.0"/>
-		<motor joint="right_j3" ctrlrange="-100.0 100.0"/>
-		<motor joint="right_j4" ctrlrange="-100.0 100.0"/>
-		<motor joint="right_j5" ctrlrange="-100.0 100.0"/>
-		<motor joint="right_j6" ctrlrange="-100.0 100.0"/>
-		<!--<motor gear="100" joint="rc_close"  />-->
-	</actuator>
+    <!-- Choose actuator options -->
+    <include file="../rethink/assets/sawyer_joint_pos_act.xml"/>
+    <!-- <include file="../rethink/assets/sawyer_joint_tor_act.xml"/>     -->
+    <!-- <include file="../rethink/assets/sawyer_mocap_ee_act.xml"/>     -->
+    <include file="../rethink/assets/sawyer_clawgripper_pos_act.xml"/>
 </mujoco>

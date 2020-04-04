@@ -3,6 +3,6 @@ Rethink robotics mujoco models
 
 # Environments 
 
-sawyer.xml           |  baxter.xml   
+sawyer.xml           |
 :-------------------------:|:-------------------------:
-![Alt text](assets/sawyer.jpg?raw=false "sawyer") |  comming soon
+![Alt text](assets/sawyer.png?raw=false "sawyer")
