@@ -18,3 +18,4 @@ Mujoco model for Rething Robotics Sawyer with different actuator options. See [s
 - removed dummy bodies
 - update to the collision geometries
 - updated assets paths for better include support
+- gripper follows include structure now
