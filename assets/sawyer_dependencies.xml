@@ -35,7 +35,7 @@
             <position ctrllimited="true" forcelimited="true"/>
             
             <default class='sawyer_col'>
-                <geom rgba=".4 .5 .6 1" group="3"/>
+                <geom rgba=".4 .5 .6 1" group="4"/>
             </default>
             <default class='sawyer_viz'>
                 <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.5 0.1 0.1 1"/>
